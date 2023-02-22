@@ -1,0 +1,21 @@
+{
+  "name": "fitfolio",
+  "version": "1.0.0",
+  "description": "[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://mit-license.org/)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumnerFrank/fitfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SumnerFrank/fitfolio/issues"
+  },
+  "homepage": "https://github.com/SumnerFrank/fitfolio#readme"
+}
