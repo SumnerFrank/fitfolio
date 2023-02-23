@@ -21,6 +21,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'Super secret secret',
   cookie: {
+   // session expires in 1 hour and 30mins  (5400000 milliseconds)
    expires: 5400000
   },
   resave: false,
