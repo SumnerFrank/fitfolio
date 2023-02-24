@@ -40,7 +40,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(require('./Develop/controllers'));
+const routes = require('./controllers');
+app.use(routes);
+
 // ADD THE CONTROLLERS CODE HERE LATER !!!//
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
