@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { Comment, Post, User } = require('../../models');
+const { Comment, Post, User, Workout } = require('../../models');
 
 // gets all posts
 router.get('/', (req, res) => {
@@ -87,6 +87,26 @@ router.post('/', withAuth, (req, res) => {
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+//Deletes a post
+router.delete('/:id', withAuth, (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        res.json(dbPostData);
+    })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
