@@ -1,48 +1,57 @@
-const mongoose = require("mongoose");
+const { Model, DataTypes } = require('sequelize');
 
-const Schema = mongoose.Schema;
+const sequelize = require('../config/connection');
 
-const WorkoutSchema = new Schema({
+class Workout extends Model {}
+
+Workout.init(
+  {
   day: {
     type: Date,
     default: Date.now
   },
   exercises: [
     {
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+      },
       type: {
-        type: String,
-        trim: true,
+        type: DataTypes.BOOLEAN,
       },
-      name: {
-        type: String,
-        trim: true,
-      },
-      duration: Number,
-      weight: {
-        type: Number,
-        default: 0
+      duration: {
+        type: DataTypes.INTEGER,
+        default: 0,
+        allowNull: false
       },
       reps: {
-        type: Number,
-        default: 0
+        type: DataTypes.INTEGER,
+        default: 0,
+        allowNull: false
       },
       sets: {
-        type: Number,
-        default: 0
+        type: DataTypes.INTEGER,
+        default: 0,
       },
       distance: {
-        type: Number,
-        default: 0
+        type: DataTypes.INTEGER,
+        default: 0,
       }
     }
   ],
   totalDuration: {
-    type: Number,
+    type: DataTypes.INTEGER,
     default: 0,
   }
-
-});
-
-const Workout = mongoose.model("Workout", WorkoutSchema);
+},
+{
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'workout',
+  });
 
 module.exports = Workout;
