@@ -6,12 +6,6 @@ class Workout extends Model {}
 
 Workout.init(
   {
-  day: {
-    type: Date,
-    default: Date.now
-  },
-  exercises: [
-    {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -38,9 +32,7 @@ Workout.init(
       distance: {
         type: DataTypes.INTEGER,
         default: 0,
-      }
-    }
-  ],
+      },
   totalDuration: {
     type: DataTypes.INTEGER,
     default: 0,
