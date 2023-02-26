@@ -1,10 +1,10 @@
-const { Comment, Post, User, Workout } = require('../../models');
 const router = require('express').Router();
-
+const withAuth = require('../../utils/auth');
+const { Comment, Post, User, Workout } = require('../../models');
 
 //Get all workouts
 router.get('/', (req, res) => {
-    User.findAll({
+    Workout.findAll({
         attributes: [
             'id',
             'type',
@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 
 //get one workout
 router.get('/:id', (req, res) => {
-    User.findAll({
+    Workout.findAll({
         attributes: [
             'id',
             'type',
@@ -80,3 +80,5 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
+module.exports = router;
