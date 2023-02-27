@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 // TO TEST LIVE SERVER PORT ROUTE 
 app.get("/", function (req, res) {
-    res.send("HEY TESTING ROUTE");
+    res.send("HEY TESTING SERVER");
 });
 
 
@@ -34,7 +34,7 @@ const sess = {
 
 app.use(session(sess));
 // Set handlebars Middleware
-app.engine('handlebars', exphbs());
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
