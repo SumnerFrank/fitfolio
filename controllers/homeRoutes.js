@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { Post, User, Comment } = require('../models')
 
-router.get('/', (req, res) => {
+router.get('/example', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
@@ -42,7 +42,16 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
-
+//landing page at localhost:3001/
+router.get('/', (req, res) => {
+    
+    res.render('homepage.handlebars');
+});
+//render feed page at localhost:3001/feed
+router.get('/feed', (req, res) => {
+    
+    res.render('feed.handlebars');
+});
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
