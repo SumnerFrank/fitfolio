@@ -3,17 +3,18 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
+const routes = require('./controllers');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-// TO TEST LIVE SERVER PORT ROUTE 
-//app.get("/", function (req, res) {
- //   res.send("HEY TESTING ROUTE");
-//});
 
+// // TO TEST LIVE SERVER PORT ROUTE 
+// app.get("/", function (req, res) {
+//     res.send("HEY TESTING SERVER");
+// });
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
@@ -32,15 +33,19 @@ const sess = {
 };
 
 app.use(session(sess));
-// Inform Express.js on which template engine to use
+// Set handlebars Middleware
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const routes = require('./controllers');
+// Set 'views' directory for any views  
+// being rendered res.render() 
+app.set('views', path.join(__dirname, 'views')); 
+
 app.use(routes);
 
 // ADD THE CONTROLLERS CODE HERE LATER !!!//

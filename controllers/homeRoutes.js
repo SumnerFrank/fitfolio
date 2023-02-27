@@ -8,8 +8,7 @@ router.get('/example', (req, res) => {
             'id',
             'post_title',
             'post_body',
-            'user_id',
-            'created_at'
+            'user_id'
         ], 
         include: [
             {
@@ -33,7 +32,7 @@ router.get('/example', (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('example', {
+        res.render('homepage', {
             posts, 
             loggedIn: req.session.loggedIn
         });
