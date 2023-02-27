@@ -10,10 +10,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-// TO TEST LIVE SERVER PORT ROUTE 
-app.get("/", function (req, res) {
-    res.send("HEY TESTING SERVER");
-});
+// // TO TEST LIVE SERVER PORT ROUTE 
+// app.get("/", function (req, res) {
+//     res.send("HEY TESTING SERVER");
+// });
 
 
 // Set up Handlebars.js engine with custom helpers
@@ -42,6 +42,9 @@ app.use(express.urlencoded({ extended: true }));
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Set 'views' directory for any views  
+// being rendered res.render() 
+app.set('views', path.join(__dirname, 'views')); 
 
 app.use(routes);
 
