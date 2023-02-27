@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
+const routes = require('./controllers');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -32,15 +33,16 @@ const sess = {
 };
 
 app.use(session(sess));
-// Inform Express.js on which template engine to use
-app.engine('handlebars', hbs.engine);
+// Set handlebars Middleware
+app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const routes = require('./controllers');
+
 app.use(routes);
 
 // ADD THE CONTROLLERS CODE HERE LATER !!!//
