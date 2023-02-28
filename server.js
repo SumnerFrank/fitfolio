@@ -47,6 +47,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views')); 
 
 app.use(routes);
+console.log('Server');
+
 
 // ADD THE CONTROLLERS CODE HERE LATER !!!//
 // sync sequelize models to the database, then turn on the server
