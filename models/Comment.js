@@ -25,6 +25,11 @@ Comment.init(
                 key: 'id'
             },
             onDelete: 'cascade'
+          },
+          created_at: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
           }
     },
     {

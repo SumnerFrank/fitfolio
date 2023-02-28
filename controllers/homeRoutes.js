@@ -8,8 +8,7 @@ router.get('/example', (req, res) => {
             'id',
             'post_title',
             'post_body',
-            'user_id',
-            'created_at'
+            'user_id'
         ], 
         include: [
             {
@@ -32,9 +31,9 @@ router.get('/example', (req, res) => {
         ]
     })
     .then(dbPostData => {
-        const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('example', {
-            posts, 
+        const feed = dbPostData.map(post => post.get({ plain: true }));
+        res.render('homepage', {
+            feed, 
             loggedIn: req.session.loggedIn
         });
     })
@@ -48,8 +47,8 @@ router.get('/', (req, res) => {
     
     res.render('homepage.handlebars');
 });
-//render feed page at localhost:3001/feed
-router.get('/feed', (req, res) => {
+//render feed page at localhost:3001/posts
+router.get('/posts', (req, res) => {
     
     res.render('feed.handlebars');
 });

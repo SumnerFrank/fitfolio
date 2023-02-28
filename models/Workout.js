@@ -36,6 +36,11 @@ Workout.init(
   totalDuration: {
     type: DataTypes.INTEGER,
     default: 0,
+  },
+  created_at: {
+    type: DataTypes.DATE,
+    allowNull: false,
+    defaultValue: DataTypes.NOW
   }
 },
 {
