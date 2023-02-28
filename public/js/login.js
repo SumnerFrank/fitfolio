@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/feed');
+        document.location.replace('/posts');
       } else {
         alert(response.statusText);
       }
