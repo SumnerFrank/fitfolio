@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
             exclude: ['password']
         }
     })
-    .then(userData => res.json(userData))
+    .then(dbUserData => res.json(dbUserData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -49,11 +49,11 @@ router.get('/:id', (req, res) => {
         }
       ]
   })
-    .then(userData => {
-        if(!userData) {
+    .then(dbUserData => {
+        if(!dbUserData) {
             res.status(404).json({ message: 'User ID Not Found.' });
             return;
-        } res.json(userData);
+        } res.json(dbUserData);
     })
     .catch(err => {
         console.log(err);
@@ -68,14 +68,9 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-    .then(userData => {
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.username = userData.userName;
-        req.session.logged_in = true;
-        res.json(userData);
-    });
-  })
+    .then(dbUserData => {
+        res.json(dbUserData)
+    })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -85,8 +80,8 @@ router.post('/', (req, res) => {
 // Deletes an existing user 
 router.delete('/:id', (req, res) => {
     User.destroy({ where: {id: req.params.id} })
-    .then(userData => {
-        if (!userData) {
+    .then(dbUserData => {
+        if (!dbUserData) {
             res.status(404).json({ message: 'User Not Found' });
             return;
         }
@@ -120,7 +115,7 @@ router.post('/login', async (req, res) => {
   
       req.session.save(() => {
         req.session.user_id = userData.id;
-        req.session.userName = userData.userName;
+        req.session.name = dbUserData.name;
         req.session.logged_in = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
@@ -134,7 +129,6 @@ router.post('/login', async (req, res) => {
 // Logs user out 
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
-      console.log(req.session.logged_in)
       req.session.destroy(() => {
         res.status(204).end();
       });
