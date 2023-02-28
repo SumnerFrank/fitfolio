@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>FitFolio - Your fitness companion</title>
+</head>
+
+this is the feed page.
+<div class="container">
+{{!-- first section that takes each post from database and puts the information in to a card --}}
+{{!-- {{#each post}} --}}
+
+{{!-- {{/each}} --}}
+
+{{!-- build form for post here --}}
+<div class="welcome-user-card">
+    <h2>Welcome, {{name}}!</h2>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    
+
+    <form class="form new-workout">
+        <div class="create-post-card">
+            <h3>Get back in the Action!</h3>
+            <form>
+              <label for="title">Share your workout.</label>
+              <input type="text" id="title" name="" placeholder="What did you do today?">
+              
+              <label for="content">How'd it go?</label>
+              <textarea id="content" name="content" placeholder="Workout details.."></textarea>
+          
+              <label for="comment">Share your thoughts!</label>
+              <textarea id="comment" name="comment" placeholder="Leave a comment.."></textarea>
+          
+              <button type="submit">Share Post</button>
+            </form>
+          </div>
+
+  {{!-- {{#if posts.length}} --}}
+  <div class="col-md-6 project-list">
+    <h3>Your Feed:</h3>
+
+    {{!-- {{#each posts as |post|}} --}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/feed/{{post.id}}">{{post.post_title}}</a></h4>
+      </div>
+      <p>{{post.post_body}}</p>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+    </div>
+    {{!-- {{/each}} --}}
+  </div>
+  {{!-- {{/if}} --}}
+</div>
+
+<script src="./js/profile.js"></script>
