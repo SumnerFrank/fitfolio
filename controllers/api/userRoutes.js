@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
             exclude: ['password']
         }
     })
-    .then(dbUserData => res.json(dbUserData))
+    .then(userData => res.json(userData))
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -49,11 +49,11 @@ router.get('/:id', (req, res) => {
         }
       ]
   })
-    .then(dbUserData => {
-        if(!dbUserData) {
+    .then(userData => {
+        if(!userData) {
             res.status(404).json({ message: 'User ID Not Found.' });
             return;
-        } res.json(dbUserData);
+        } res.json(userData);
     })
     .catch(err => {
         console.log(err);
@@ -68,8 +68,8 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-    .then(dbUserData => {
-        res.json(dbUserData)
+    .then(userData => {
+        res.json(userData)
     })
     .catch(err => {
         console.log(err);
@@ -80,8 +80,8 @@ router.post('/', (req, res) => {
 // Deletes an existing user 
 router.delete('/:id', (req, res) => {
     User.destroy({ where: {id: req.params.id} })
-    .then(dbUserData => {
-        if (!dbUserData) {
+    .then(userData => {
+        if (!userData) {
             res.status(404).json({ message: 'User Not Found' });
             return;
         }
