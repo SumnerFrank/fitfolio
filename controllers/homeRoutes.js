@@ -47,8 +47,8 @@ router.get('/', (req, res) => {
     
     res.render('homepage.handlebars');
 });
-//render feed page at localhost:3001/feed
-router.get('/feed', (req, res) => {
+//render feed page at localhost:3001/posts
+router.get('/posts', (req, res) => {
     
     res.render('feed.handlebars');
 });

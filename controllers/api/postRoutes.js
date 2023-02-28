@@ -2,7 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Comment, Post, User, Workout } = require('../../models');
 
-// gets all posts
+// gets all posts 
 router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
                 ], 
                 include: {
                     mdoel: User,
-                    attributes: ['name']
+                    attributes: ['userName']
                 }
 
             }
@@ -59,10 +59,10 @@ router.get('/:id', (req, res) => {
                     'user_id',
                     'created_at'
                 ],
-                include: {
-                    model: User,
-                    attributes: ['name']
-                }
+            }, 
+            {
+                model: User,
+                attributes: ['userName']
             }
         ]
     })
