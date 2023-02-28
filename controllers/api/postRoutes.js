@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
                     'created_at'
                 ], 
                 include: {
-                    mdoel: User,
+                    model: User,
                     attributes: ['userName']
                 }
 
