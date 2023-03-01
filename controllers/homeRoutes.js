@@ -32,7 +32,7 @@ router.get('/example', (req, res) => {
     })
     .then(dbPostData => {
         const feed = dbPostData.map(post => post.get({ plain: true }));
-        res.render('homepage', {
+        res.render('posts', {
             feed, 
             loggedIn: req.session.loggedIn
         });
@@ -45,12 +45,15 @@ router.get('/example', (req, res) => {
 //landing page at localhost:3001/
 router.get('/', (req, res) => {
     
-    res.render('homepage.handlebars');
+    res.render('homepage.handlebars', {
+        loggedIn: req.session.loggedIn
+    });
+
 });
 //render feed page at localhost:3001/posts
 router.get('/posts', (req, res) => {
     
-    res.render('feed.handlebars');
+    res.render('feed.handlebars', {loggedIn:true});
 });
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
