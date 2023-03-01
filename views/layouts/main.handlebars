@@ -15,10 +15,11 @@
   </header>
   <nav>
     <a href="/">Home</a>
+    <a href="/login">Login</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">logout</button>
-    {{else}}
-    <a href="/login">Login</a>
+      <script src="../../public/js/logout.js"></script>
+    {{!-- {{else}} --}}
     {{/if}}
   </nav>
   <main>
@@ -29,9 +30,9 @@
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
+  {{!-- {{#if loggedIn}}
   <script src="../../public/js/logout.js"></script>
-  {{/if}}
+  {{/if}} --}}
 </body>
 
 </html>
