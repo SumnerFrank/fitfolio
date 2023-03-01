@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>FitFolio - Your fitness companion</title>
 </head>
 
@@ -17,13 +20,13 @@ this is the feed page.
 
 {{!-- build form for post here --}}
 <div class="welcome-user-card">
+    <p></p>
+    <p></p>
     <h2>Welcome, {{name}}!</h2>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
-    
-
     <form class="form new-workout">
         <div class="create-post-card">
             <h3>Get back in the Action!</h3>
@@ -40,6 +43,9 @@ this is the feed page.
               <button type="submit">Share Post</button>
             </form>
           </div>
+      </form>
+  </div>
+</div>
 
   {{!-- {{#if posts.length}} --}}
   <div class="col-md-6 project-list">
@@ -50,6 +56,21 @@ this is the feed page.
       <div class="col-md-8">
         <h4><a href="/feed/{{post.id}}">{{post.post_title}}</a></h4>
       </div>
+      <div class="card">
+  <img class="card-img-top" src="" alt="">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text"></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"></li>
+    <li class="list-group-item"></li>
+    <li class="list-group-item"></li>
+  </ul>
+  <div class="card-footer">
+    <small class="text-muted"></small>
+  </div>
+</div>
       <p>{{post.post_body}}</p>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
@@ -59,5 +80,7 @@ this is the feed page.
   </div>
   {{!-- {{/if}} --}}
 </div>
+
+
 
 <script src="./js/profile.js"></script>
