@@ -3,58 +3,53 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 530px;
-    max-width: 700px;
+    min-height: 430px;
+    min-width: 600px;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 20px;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     animation: fadeIn 4s;
     flex: 1;
     font-family: 'Bebas Neue', cursive;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}    
-}
-
-.login-card {
+  }
+  
+  .login-card {
     background-color: rgba(64, 64, 64, 64);
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     padding: 15px;
-    height: 600px;
-    width: 300px;
-    margin-bottom: 30px;
+    height: 300px;
+    min-width: 300px;
     border-radius: 15px 15px 15px 15px;
     position: relative;   
     color: rgb(255, 255, 255);
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
-    margin-left: auto; 
-    margin-right: auto;
+    margin-bottom: 30px;
     text-align: center;
     animation: fadeIn 3s;
-}
-
-.container {
+  }
+  
+  #login-container {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container {
     flex: 1;
     margin-top: 50px;
-}
-
-#feed-container {
-    align-items: center;
-}
-
-
-.content-wrapper {
+  }
+  
+  .content-wrapper {
     display: flex;
-}
-
-body {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  body {
     background-color: rgb(183, 153, 106);
-}
+  }
 
 /* Feed page below */
 
@@ -165,11 +160,11 @@ body {
     background-image: url(../images/Header-background.jpeg); 
     background-position: stretch;
     background-size: cover;
-    min-height: 550px;
-    max-width: 1000px;
+    min-height: 350px;
+    max-width: 600px;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     animation: fadeIn 4s;
@@ -209,6 +204,9 @@ body {
 }
 
 /* Media queries */
+
+/* Login page below */
+
 @media only screen and (max-width: 768px) {
     /* Adjust fit-hero background image size and max-width */
     .fit-hero {
@@ -219,7 +217,7 @@ body {
     /* Adjust login-card width and height */
     .login-card {
         width: 100%;
-        min-height: 380px;
+        min-height: 385px;
         font-size: 35px;
     }
 
@@ -250,7 +248,7 @@ body {
     .login-card {
         width: 65%;
         font-size: 35px;
-        min-height: 380px;
+        min-height: 385px;
     }
 
     /* Adjust font size */
@@ -258,6 +256,10 @@ body {
         font-size: 35px;
     }
 }
+
+
+
+
 
   /* feed page below: */
 
@@ -353,7 +355,6 @@ body {
   }
   
   button:hover {
-    background-color: #cf3700;
-    
+    background-color: #cf3700; 
   }
 
