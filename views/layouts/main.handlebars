@@ -12,16 +12,16 @@
 <body>
   <header>
     <h1>Welcome to FITFOLIO</h1>
-  </header>
+ 
   <nav>
     <a href="/">Home</a>
-    <a href="/login">Login</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">logout</button>
-      <script src="../../public/js/logout.js"></script>
-    {{!-- {{else}} --}}
+    {{else}}
+    <a href="/login">login</a>
     {{/if}}
   </nav>
+   </header>
   <main>
     <aside>
       <h2>Enjoy your workout!</h2>
@@ -30,9 +30,11 @@
       {{{body}}}
     </div>
   </main>
-  {{!-- {{#if loggedIn}}
-  <script src="../../public/js/logout.js"></script>
-  {{/if}} --}}
+
+  
+  {{#if loggedIn}}
+<script src="js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
