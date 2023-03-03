@@ -1,9 +1,9 @@
 .fit-hero {
-    background-image: url(../images/Header-background.jpeg); 
+    background-image: url(../images/Header-background.gif); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 430px;
+    min-height: 500px;
     min-width: 600px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -23,8 +23,8 @@
     background-color: rgba(64, 64, 64, 64);
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     padding: 15px;
-    height: 300px;
-    min-width: 300px;
+    height: 400px;
+    min-width: 385px;
     border-radius: 15px 15px 15px 15px;
     position: relative;   
     color: rgb(255, 255, 255);
@@ -35,15 +35,14 @@
     animation: fadeIn 3s;
   }
   
-  #login-container {
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
   .container {
     flex: 1;
     margin-top: 50px;
+  }
+
+  .login-container {
+    flex: 1;
+    margin-top: 20px;
   }
   
   .content-wrapper {
@@ -83,6 +82,11 @@
     animation: fadeIn 3s;
   }
 
+  .create-post-card label {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
   .populate-post-card {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -90,6 +94,8 @@
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -99,13 +105,18 @@
     padding: 15px;
     height: 380px;
     width: 500px;
-    margin-bottom: 15px;
+    
     border-radius: 15px 15px 15px 15px;
     position: relative;   
     color: rgb(255, 255, 255);
     font-family: 'Bebas Neue', cursive;
     font-size: 40px;
     animation: fadeIn 3s;
+  }
+
+  .populate-post-card label {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 
   .welcome-user-card {
@@ -149,11 +160,6 @@
     align-items: stretch;
   }
   
-  label {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
   input[type="text"],
   textarea {
     margin-bottom: 10px;
@@ -184,53 +190,6 @@
     font-size: 20px;
   }
 
-  /* Media queries for large displays and smartphones. */
-
-  /* login/signup page below: */
-
-  .fit-hero {
-    background-image: url(../images/Header-background.jpeg); 
-    background-position: stretch;
-    background-size: cover;
-    min-height: 350px;
-    max-width: 600px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    border-radius: 15px 15px 15px 15px;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    animation: fadeIn 4s;
-    flex: 1;
-}
-
-.login-card {
-    background-color: rgba(64, 64, 64, 64);
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-    padding: 15px;
-    height: 280px;
-    width: 600px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 15px 15px;
-    position: relative;   
-    color: rgb(255, 255, 255);
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    margin-left: auto; 
-    margin-right: auto;
-    text-align: center;
-    animation: fadeIn 3s;
-}
-
-.container {
-    flex: 1;
-    margin-top: 50px;
-    padding: 20px;
-}
-
-.content-wrapper {
-    display: flex;
-}
-
 body {
     background-color: rgb(183, 153, 106);
 }
@@ -242,12 +201,16 @@ body {
 @media only screen and (max-width: 768px) {
     .fit-hero {
         background-size: 100%;
-        max-width: none;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        height: 500px;
+        background-size: cover;
     }
 
     /* Adjusts login-card width and height */
     .login-card {
-        width: 100%;
+        min-width: 400px;
         min-height: 385px;
         font-size: 35px;
     }
@@ -273,11 +236,18 @@ body {
     /* Adjusts fit-hero background image size */
     .fit-hero {
         background-size: 100%;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        height: auto;
+        background-size: cover;
+        flex: none;
     }
 
-    /* Adjusts login-card width */
-    .login-card {
-        width: 65%;
+     /* Adjusts login-card width */
+     .login-card {
+        width: 400px;
         font-size: 35px;
         min-height: 385px;
     }
@@ -285,10 +255,14 @@ body {
     /* Adjusts font size */
     .login-card, .page-title {
         font-size: 35px;
+    }   
+
+    .login-container {
+        flex: none;
     }
 
-    #login-row {
-        display: inline;
+    .content-wrapper {
+        flex: none;
     }
 }
 
@@ -304,7 +278,7 @@ body {
       width: 100%;
       max-width: 3000px;
       margin: 0 auto;
-      height: 380px;
+      height: auto;
       background-size: cover;
       font-family: 'Bebas Neue', cursive;
       font-size: 26px;
@@ -353,6 +327,15 @@ body {
       margin-right: auto;
       margin-left: auto;
     }
+    .populate-post-card {
+        width: 100%;
+        max-width: 3000px;
+        margin: 0 auto;
+        height: auto;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
   }
   
   /* Style for input fields */
