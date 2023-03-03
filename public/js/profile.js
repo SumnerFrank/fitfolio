@@ -4,7 +4,8 @@ const newFormHandler = async (event) => {
   
     const title = document.querySelector('#post-name').value.trim();
     const description = document.querySelector('#post-desc').value.trim();
-  console.log('test123');
+  console.log('test123'); 
+  console.log(title);
     if (title && description) {
         console.log('hello world')
       const response = await fetch(`/api/posts`, {
@@ -16,7 +17,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/posts');
       } else {
         alert('Failed to create post');
       }
@@ -32,7 +33,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/posts');
       } else {
         alert('Failed to delete post');
       }
