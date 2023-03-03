@@ -13,6 +13,11 @@
     flex: 1;
     font-family: 'Bebas Neue', cursive;
   }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}    
+}
   
   .login-card {
     background-color: rgba(64, 64, 64, 64);
@@ -75,6 +80,32 @@
     color: rgb(255, 255, 255);
     font-family: 'Bebas Neue', cursive;
     font-size: 40px;
+    animation: fadeIn 3s;
+  }
+
+  .populate-post-card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: rgba(64, 64, 64, 64);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    padding: 15px;
+    height: 380px;
+    width: 500px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 15px 15px;
+    position: relative;   
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    animation: fadeIn 3s;
   }
 
   .welcome-user-card {
@@ -102,6 +133,7 @@
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: 'Bebas Neue' cursive;
+    animation: fadeIn 4s;
     }
 
   .welcome-user-card h2 {
@@ -208,67 +240,65 @@ body {
 /* Login page below */
 
 @media only screen and (max-width: 768px) {
-    /* Adjust fit-hero background image size and max-width */
     .fit-hero {
         background-size: 100%;
         max-width: none;
     }
 
-    /* Adjust login-card width and height */
+    /* Adjusts login-card width and height */
     .login-card {
         width: 100%;
         min-height: 385px;
         font-size: 35px;
     }
 
-    /* Adjust font size */
+    /* Adjusts font size */
     .login-card, .page-title {
         font-size: 35px;
     }
 }
 
-  /* Stack login cards under fit hero */
+  /* Stacks login cards under fit hero */
   .row {
     flex-direction: column;
     align-items: center;
   }
 
-  /* Add spacing between login cards */
+  /* Adds spacing between login cards */
   .login-card + .login-card {
     margin-top: 20px;
   }
 
 @media only screen and (min-width: 768px) {
-    /* Adjust fit-hero background image size */
+    /* Adjusts fit-hero background image size */
     .fit-hero {
         background-size: 100%;
     }
 
-    /* Adjust login-card width */
+    /* Adjusts login-card width */
     .login-card {
         width: 65%;
         font-size: 35px;
         min-height: 385px;
     }
 
-    /* Adjust font size */
+    /* Adjusts font size */
     .login-card, .page-title {
         font-size: 35px;
     }
+
+    #login-row {
+        display: inline;
+    }
 }
 
-
-
-
-
   /* feed page below: */
-
-  /* Common styles for all screen sizes */
+  
 * {
     box-sizing: border-box;
   }
   
-  /* Styles for larger screen sizes */
+  /* Style for larger screen sizes */
   @media (min-width: 768px) {
     .welcome-user-card {
       width: 100%;
@@ -289,9 +319,18 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
+    .populate-post-card {
+        width: 100%;
+        max-width: 3000px;
+        margin: 0 auto;
+        height: auto;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
   }
   
-  /* Styles for smaller screen sizes */
+  /* Style for smaller screen sizes */
   @media (max-width: 768px) {
     .welcome-user-card {
       width: 100%;
@@ -316,7 +355,7 @@ body {
     }
   }
   
-  /* Styles for input fields */
+  /* Style for input fields */
   form {
     display: flex;
     flex-direction: column;
