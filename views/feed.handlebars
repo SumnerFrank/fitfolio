@@ -12,12 +12,12 @@
             <h3>Get back in the Action!</h3>
             <form>
               <label for="title">Share your workout.</label>
-              <input type="text" id="title" name="" placeholder="What did you do today?">
+              <input type="text" id="title" name="title" placeholder="What did you do today?">
               
               <label for="content">How'd it go?</label>
               <textarea id="content" name="content" placeholder="Workout details.."></textarea>
           
-              <button type="submit">Share Post</button>
+              <button id="submit-btn" type="submit">Share Post</button>
             </form>
           </div>
       </form>
@@ -31,15 +31,17 @@
 
 <div class="row mt-4">
     <div class="col-md-6">
+      {{#each feed as |post|}}
           <div class="populate-post-card">
-              <h4><a href="{{post.post_title}}"></a></h4>
-              <h4><a href="{{/posts/{{post.body}}"></a></h4>
+              <h4><a href=""></a>{{post.post_title}}</h4>
+              {{!-- <h4><a href=""></a>{{posts.post_body}}</h4> --}}
                 <form class="form populate-post">
                 <label for="comment">Share your thoughts!</label>
                 <textarea id="comment" name="comment" placeholder="Leave a comment.."></textarea>
                 <button type="submit">Submit Comment</button>
                 </form>
             </div>
+            {{/each}}
         </form>
     </div>
   </div>
