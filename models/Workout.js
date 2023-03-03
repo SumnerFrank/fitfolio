@@ -17,7 +17,7 @@ Workout.init(
       },
       duration: {
         type: DataTypes.INTEGER,
-        default: 0,
+     
         allowNull: false
       },
       reps: {
