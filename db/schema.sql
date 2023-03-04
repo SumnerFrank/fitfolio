@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS tracker_db;
+DROP DATABASE IF EXISres.jsonTS tracker_db;
 
 CREATE DATABASE tracker_db;

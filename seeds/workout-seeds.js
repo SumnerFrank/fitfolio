@@ -1,6 +1,7 @@
 // WILL WORK ON NEXT
 const {Workout} = require("../models");
-let workoutdata = [
+
+const workoutdata = [
   {
     day: new Date().setDate(new Date().getDate()-10),
     exercises: [
