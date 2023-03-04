@@ -51,24 +51,6 @@ router.get('/', (req, res) => {
     });
 
 });
-//render feed page at localhost:3001/posts
-// router.get('/posts', async (req, res) => {
-//     try{
-//         const postData = await Post.findAll({
-//             attributes: [
-//                 'id',
-//                 'post_title',
-//                 'post_body',
-//                 'user_id'
-//             ]
-//         })
-//         res.render('feed.handlebars', postData, {loggedIn:true});
-//     }
-//     catch(err){
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
-// });
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

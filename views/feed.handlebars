@@ -2,7 +2,7 @@
 
 <div class="welcome-user-card">
     <p></p>
-    <h2>Welcome back, {{name}}!</h2>
+    <h2>Welcome back, {{user.userName}}!</h2>
 </div>
 
 <div class="row mt-4">
@@ -34,8 +34,10 @@
       {{#each feed as |post|}}
           <div class="populate-post-card">
               <h4><a href=""></a>{{post.post_title}}</h4>
-              {{!-- <h4><a href=""></a>{{posts.post_body}}</h4> --}}
+              <h4><a href=""></a>{{post.post_body}}</h4>
                 <form class="form populate-post">
+                  <h3><div>Comments should go here</div></h3>
+              <h3><a href=""></a>{{comment.comment_body}}</h3>
                 <label for="comment">Share your thoughts!</label>
                 <textarea id="comment" name="comment" placeholder="Leave a comment.."></textarea>
                 <button type="submit">Submit Comment</button>
