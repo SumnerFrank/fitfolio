@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { Post, User, Comment } = require('../models')
 
-router.get('/example', (req, res) => {
+router.get('/posts', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
@@ -32,7 +32,8 @@ router.get('/example', (req, res) => {
     })
     .then(dbPostData => {
         const feed = dbPostData.map(post => post.get({ plain: true }));
-        res.render('posts', {
+        console.log(feed);
+        res.render('feed', {
             feed, 
             loggedIn: req.session.loggedIn
         });
@@ -51,10 +52,24 @@ router.get('/', (req, res) => {
 
 });
 //render feed page at localhost:3001/posts
-router.get('/posts', (req, res) => {
-    
-    res.render('feed.handlebars', {loggedIn:true});
-});
+// router.get('/posts', async (req, res) => {
+//     try{
+//         const postData = await Post.findAll({
+//             attributes: [
+//                 'id',
+//                 'post_title',
+//                 'post_body',
+//                 'user_id'
+//             ]
+//         })
+//         res.render('feed.handlebars', postData, {loggedIn:true});
+//     }
+//     catch(err){
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
+
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
