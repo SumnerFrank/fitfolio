@@ -1,6 +1,6 @@
 // WILL WORK ON NEXT
 const {Workout} = require("../models");
-let db = require("../models");
+
 const workoutdata = [
   {
     day: new Date().setDate(new Date().getDate()-10),
@@ -127,19 +127,19 @@ const workoutdata = [
         distance: 2
       }
     ]
-  }
+}
 ];
 
-db.Workout.deleteMany({})
-  .then(() => db.Workout.collection.insertMany(seedWorkouts))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+// db.Workout.deleteMany({})
+//   .then(() => db.Workout.collection.insertMany(seedWorkouts))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
 
 const seedWorkouts = () => Workout.bulkCreate(workoutdata);
 
