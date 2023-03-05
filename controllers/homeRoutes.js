@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Post, User, Comment } = require('../models')
+const { Post, User, Comment, Workout } = require('../models')
 
 router.get('/posts', (req, res) => {
     Post.findAll({
@@ -43,6 +43,55 @@ router.get('/posts', (req, res) => {
         res.status(500).json(err);
     });
 });
+// WORKOUTS/EXERCISE ROUTES
+
+router.get('/exercise', (req, res) => {
+    Workout.findAll({
+        // include: [
+        //     {
+        //         model: Comment,
+        //         attributes: [
+        //             'id',
+        //             'comment_body',
+        //             'post_id',
+        //             'user_id',
+        //         ],
+        //         include: {
+        //             model: User,
+        //             attrubutes: ['userName']
+        //         }
+        //     },
+        //     {
+        //         model: User,
+        //         attribute: ['userName']
+        //     }
+        // ]
+        // TO DO: REVIEW THIS
+    })
+    .then(dbPostData => {
+        const exercises = dbPostData.map(post => post.get({ plain: true }));
+        console.log(exercises);
+        res.render('exercise', {
+            exercises, 
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// GET REQUEST FOR CREATED WORKOUT
+// router.get('/exercise', (req, res) => {
+//     // res.render('exercise'),
+//     console.log('exercise')
+// TO DO: GET ALL WORKOUTS WILL NEED MORE WORK
+
+
+
+
+
 //landing page at localhost:3001/
 router.get('/', (req, res) => {
     

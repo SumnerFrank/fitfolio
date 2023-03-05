@@ -1,10 +1,9 @@
-// WILL WORK ON NEXT
 const {Workout} = require("../models");
 
 const workoutdata = [
-  {
-    day: new Date().setDate(new Date().getDate()-10),
-    exercises: [
+  
+    // day: new Date().setDate(new Date().getDate()-10),
+    
       {
         type: "resistance",
         name: "Bicep Curl",
@@ -12,12 +11,12 @@ const workoutdata = [
         weight: 100,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-9),
-    exercises: [
+      },
+  
+  
+  
+    // day: new Date().setDate(new Date().getDate()-9),
+   
       {
         type: "resistance",
         name: "Lateral Pull",
@@ -25,12 +24,12 @@ const workoutdata = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-8),
-    exercises: [
+      },
+    
+  
+  
+    // day: new Date().setDate(new Date().getDate()-8),
+    
       {
         type: "resistance",
         name: "Push Press",
@@ -38,23 +37,23 @@ const workoutdata = [
         weight: 185,
         reps: 8,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-7),
-    exercises: [
+      },
+  
+  
+  
+    // day: new Date().setDate(new Date().getDate()-7),
+    
       {
         type: "cardio",
         name: "Running",
         duration: 25,
         distance: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-6),
-    exercises: [
+      },
+  
+  
+  
+    // day: new Date().setDate(new Date().getDate()-6),
+    
       {
         type: "resistance",
         name: "Bench Press",
@@ -62,12 +61,11 @@ const workoutdata = [
         weight: 285,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-5),
-    exercises: [
+      },
+  
+  
+    // day: new Date().setDate(new Date().getDate()-5),
+   
       {
         type: "resistance",
         name: "Bench Press",
@@ -75,12 +73,12 @@ const workoutdata = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-4),
-    exercises: [
+      },
+    
+  
+  
+    // day: new Date().setDate(new Date().getDate()-4),
+   
       {
         type: "resistance",
         name: "Quad Press",
@@ -88,12 +86,10 @@ const workoutdata = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-3),
-    exercises: [
+      },
+  
+    // day: new Date().setDate(new Date().getDate()-3),
+ 
       {
         type: "resistance",
         name: "Bench Press",
@@ -101,12 +97,11 @@ const workoutdata = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-2),
-    exercises: [
+      },
+    
+
+    // day: new Date().setDate(new Date().getDate()-2),
+
       {
         type: "resistance",
         name: "Military Press",
@@ -114,21 +109,21 @@ const workoutdata = [
         weight: 300,
         reps: 10,
         sets: 4
-      }
-    ]
-  },
-  {
-    day: new Date().setDate(new Date().getDate()-1),
-    exercises: [
+      },
+ 
+ 
+  
+    // day: new Date().setDate(new Date().getDate()-1),
+    
       {
         type: "cardio",
         name: "Bench",
         duration: 30,
         distance: 2
-      }
-    ]
-}
+      },
 ];
+
+
 
 // db.Workout.deleteMany({})
 //   .then(() => db.Workout.collection.insertMany(seedWorkouts))
@@ -144,3 +139,4 @@ const workoutdata = [
 const seedWorkouts = () => Workout.bulkCreate(workoutdata);
 
 module.exports = seedWorkouts;
+

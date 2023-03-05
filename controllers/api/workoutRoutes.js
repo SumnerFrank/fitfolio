@@ -5,14 +5,14 @@ const { Comment, Post, User, Workout } = require('../../models');
 //Get all workouts
 router.get('/', (req, res) => {
     Workout.findAll({
-        attributes: [
-            'id',
-            'type',
-            'duration',
-            'reps',
-            'sets',
-            'distance'
-        ]
+        // attributes: [
+        //     'id',
+        //     'type',
+        //     'duration',
+        //     'reps',
+        //     'sets',
+        //     'distance'
+        // ]  TO DO: WILL SHOW ALL VALUES IF COMMENTED OUT!!!
     })
     .then(dbWorkoutData => res.json(dbWorkoutData))
     .catch(err => {
