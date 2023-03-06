@@ -1,9 +1,9 @@
-# Tech-Blog-MVC
+# Fitfolio
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://mit-license.org/)
 
 ## Table of Content
-- [Tech-Blog-MVC](#tech-blog-mvc)
+- [Fitfolio](#Fitfolio)
   - [Table of Content](#table-of-content)
   - [Description](#description)
   - [Installation](#installation)
@@ -14,7 +14,7 @@
   - [Questions](#questions)
 
 ## Description
-*Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This application will will follow the **MVC paradigm** in its architectural structure, using ***Handlebars.js*** as the templating language, ***Sequelize*** as the ORM, and the ***express-session npm package*** for authentication.* 
+*Fitfolio is the best place to share your accomplishments in the gym, compete with your friends, and track your own progress! With this application, you can make posts, comment on others' posts, and keep an inventory of your workouts so you can remember what worked, what sucked, and what else you can do.* 
 
 
 
@@ -43,7 +43,11 @@ ADD IMAGES/VID HERE
     This application is licensed under the MIT license.
 
 ## Questions
-*Please contact me below!*
-- Github: [JulienneJulien](https://github.com/JulienneJulien)
-- Email: JulienneJulien15@gmail.com 
+*Credits*
+- [Julienne Julien](https://github.com/JulienneJulien)
+- [Kevin Arguello](https://github.com/karguello90)
+- [Jose Garcia](https://github.com/JAG-9)
+- [Tyler Ritone](https://github.com/r11tone)
+- [Frank Sumner](https://github.com/SumnerFrank)
+
 
