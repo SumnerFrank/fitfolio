@@ -50,7 +50,7 @@ router.post('/', withAuth, (req, res) => {
         user_id: req.session.user_id
     })
     .then(dbCommentData => {
-        const feed = dbCommentData.map(post => post.get({ plain: true }));
+        const feed = dbCommentData.map(comment => comment.get({ plain: true }));
         console.log(feed);
         res.render('feed', {
             feed, 
