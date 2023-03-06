@@ -22,7 +22,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-   // session expires in 1 hour and 30mins  (5400000 milliseconds)
+   // session expires in 15 hours (54000000 milliseconds)
    expires: 54000000
   },
   resave: false,
@@ -36,6 +36,10 @@ app.use(session(sess));
 // Set handlebars Middleware
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+app.get("/", function (req, res) {
+  res.render('homepage');
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -51,6 +55,6 @@ console.log('Server');
 
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 })
