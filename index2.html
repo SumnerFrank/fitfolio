@@ -11,6 +11,44 @@
     <title>FitFolio - Track, Compete, Grow</title>
 </head>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITFOLIO</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to FITFOLIO</h1>
+ 
+  <nav class ="nav">
+    <button id="home" </a>class="btn-no-style"><a href="/login">login</a></button>
+    <!-- <a href="/">Home</a> -->
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">logout</button>
+    {{else}}
+    <button id="login" class="btn-no-style">login</button>
+    <!-- <a href="/login">login</a> -->
+    {{/if}}
+  </nav>
+   </header>
+  <main>
+    <aside>
+      <h2>Enjoy your workout!</h2>
+    </aside>
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+
+  
+  {{#if loggedIn}}
+<script src="js/logout.js"></script>
+  {{/if}}
+</body>
+
 this is the feed page.
 <div class="container">
 

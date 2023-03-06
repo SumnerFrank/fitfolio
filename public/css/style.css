@@ -33,6 +33,42 @@
     margin-bottom: 30px;
     text-align: center;
     animation: fadeIn 3s;
+    text-shadow: 5px 5px 5px rgb(42, 42, 42);
+  }
+
+  header h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(27, 27, 27);
+  }
+
+  aside h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgb(27, 27, 27);
+  }
+
+  nav {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(64, 64, 64, 64);
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 15px 15px 15px 15px;
+    position: fixed;
+    top: 10;
+    width: 95%;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  main {
+    margin-top: 30px;
   }
   
   .container {
@@ -80,6 +116,7 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 40px;
     animation: fadeIn 3s;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
   }
 
   .create-post-card label {
@@ -105,7 +142,7 @@
     padding: 15px;
     height: 380px;
     width: 500px;
-    
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
     border-radius: 15px 15px 15px 15px;
     position: relative;   
     color: rgb(255, 255, 255);
@@ -151,7 +188,7 @@
     margin-top: 225px;
     font-family: 'Bebas Neue' cursive;
     font-size: 26px;
-
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
   }
   
   form {
