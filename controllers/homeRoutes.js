@@ -73,7 +73,7 @@ router.get('/exercise', (req, res) => {
         console.log(exercises);
         res.render('exercise', {
             exercises, 
-            // loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
