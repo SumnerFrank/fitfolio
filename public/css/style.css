@@ -1,4 +1,67 @@
 .fit-hero {
+<<<<<<< HEAD
+  background-image: url(../images/Header-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 530px;
+  max-width: 700px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  animation: fadeIn 4s;
+  flex: 1;
+  font-family: 'Bebas Neue', cursive;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-card {
+  background-color: rgba(64, 64, 64, 64);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding: 15px;
+  height: 600px;
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: fadeIn 3s;
+}
+
+.container {
+  flex: 1;
+  margin-top: 50px;
+}
+
+#feed-container {
+  align-items: center;
+}
+
+
+.content-wrapper {
+  display: flex;
+}
+
+body {
+  background-color: rgb(183, 153, 106);
+}
+=======
     background-image: url(../images/Header-background.gif); 
     background-size: cover;
     background-position: center;
@@ -54,10 +117,62 @@
   body {
     background-color: rgb(183, 153, 106);
   }
+>>>>>>> main
 
 /* Feed page below */
 
 .create-post-card {
+<<<<<<< HEAD
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: rgba(64, 64, 64, 64);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding: 15px;
+  height: 380px;
+  width: 500px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+}
+
+.welcome-user-card {
+  background-image: url("../images/Welcome-user\ gif.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: right;
+  background-color: rgba(64, 64, 64, 64);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding: 15px;
+  height: 260px;
+  width: 480px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Bebas Neue' cursive;
+}
+=======
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -146,12 +261,105 @@
     font-family: 'Bebas Neue' cursive;
     animation: fadeIn 4s;
     }
+>>>>>>> main
 
-  .welcome-user-card h2 {
-    margin-top: 225px;
-    font-family: 'Bebas Neue' cursive;
-    font-size: 26px;
+.welcome-user-card h2 {
+  margin-top: 225px;
+  font-family: 'Bebas Neue' cursive;
+  font-size: 26px;
 
+<<<<<<< HEAD
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc0ae;
+  border-radius: 5px;
+  resize: none;
+  flex: 1;
+  font-family: 'Bebas Neue', cursive;
+}
+
+button {
+  background-color: #f7a655;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #cf3700;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+/* Media queries for large displays and smartphones. */
+
+/* login/signup page below: */
+
+.fit-hero {
+  background-image: url(../images/Header-background.jpeg);
+  background-position: stretch;
+  background-size: cover;
+  min-height: 550px;
+  max-width: 1000px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  animation: fadeIn 4s;
+  flex: 1;
+}
+
+.login-card {
+  background-color: rgba(64, 64, 64, 64);
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+  padding: 15px;
+  height: 280px;
+  width: 600px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  animation: fadeIn 3s;
+}
+
+.container {
+  flex: 1;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+}
+
+=======
   }
   
   form {
@@ -190,8 +398,9 @@
     font-size: 20px;
   }
 
+>>>>>>> main
 body {
-    background-color: rgb(183, 153, 106);
+  background-color: rgb(183, 153, 106);
 }
 
 /* Media queries */
@@ -199,6 +408,78 @@ body {
 /* Login page below */
 
 @media only screen and (max-width: 768px) {
+<<<<<<< HEAD
+
+  /* Adjust fit-hero background image size and max-width */
+  .fit-hero {
+    background-size: 100%;
+    max-width: none;
+  }
+
+  /* Adjust login-card width and height */
+  .login-card {
+    width: 100%;
+    min-height: 380px;
+    font-size: 35px;
+  }
+
+  /* Adjust font size */
+  .login-card,
+  .page-title {
+    font-size: 35px;
+  }
+}
+
+/* Stack login cards under fit hero */
+.row {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add spacing between login cards */
+.login-card+.login-card {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* Adjust fit-hero background image size */
+  .fit-hero {
+    background-size: 100%;
+  }
+
+  /* Adjust login-card width */
+  .login-card {
+    width: 65%;
+    font-size: 35px;
+    min-height: 380px;
+  }
+
+  /* Adjust font size */
+  .login-card,
+  .page-title {
+    font-size: 35px;
+  }
+}
+
+/* feed page below: */
+
+/* Common styles for all screen sizes */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles for larger screen sizes */
+@media (min-width: 768px) {
+  .welcome-user-card {
+    width: 100%;
+    max-width: 3000px;
+    margin: 0 auto;
+    height: 380px;
+    background-size: cover;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 26px;
+=======
     .fit-hero {
         background-size: 100%;
         width: 100%;
@@ -378,5 +659,122 @@ body {
   
   button:hover {
     background-color: #cf3700; 
+>>>>>>> main
   }
 
+  .create-post-card {
+    width: 100%;
+    max-width: 3000px;
+    margin: 0 auto;
+    height: auto;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Styles for smaller screen sizes */
+@media (max-width: 768px) {
+  .welcome-user-card {
+    width: 100%;
+    max-width: 3000px;
+    background-size: cover;
+    height: auto;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 26px;
+  }
+
+  .create-post-card {
+    width: 100%;
+    max-width: 3000px;
+    margin: 0;
+    height: auto;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Styles for input fields */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc0ae;
+  border-radius: 5px;
+  resize: none;
+  flex: 1;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+
+button {
+  background-color: #f7a655;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Bebas Neue' cursive;
+}
+
+button:hover {
+  background-color: #cf3700;
+
+}
+
+nav {
+  background-color: #f7a655;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Bebas Neue' cursive;
+  list-style: none;
+  
+}
+
+nav a {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  flex: 1;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: .3s;
+  align-items: center;
+  list-style: ;
+  display: flex;
+  justify-content: center;
+}
+
+nav a:hover {
+ background-color: #cf3700;
+
+}
