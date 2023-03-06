@@ -63,7 +63,7 @@
     width: 98%;
     overflow: hidden;
     z-index: 9;
-    height: 38%;
+    max-height: 130px;
   }
 
   main {
@@ -307,6 +307,20 @@ body {
 * {
     box-sizing: border-box;
   }
+
+  nav {
+    margin: 0;
+    text-align: center;
+    background-color:#2e2e2e;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: #ffffff;
+    position: fixed;
+    top: 0px;
+    width: 98%;
+    overflow: hidden;
+    z-index: 9;
+    height: 24%;
+  }
   
   /* Style for larger screen sizes */
   @media (min-width: 768px) {
@@ -351,7 +365,7 @@ body {
     width: 98%;
     overflow: hidden;
     z-index: 9;
-    height: 37%;
+    height: 24%;
   }
   
   /* Style for smaller screen sizes */
@@ -379,7 +393,7 @@ body {
       width: 98%;
       overflow: hidden;
       z-index: 9;
-      height: 26%;
+      max-height: 15%;
     }
   
     .create-post-card {
@@ -479,7 +493,7 @@ body {
     width: 98%;
     overflow: hidden;
     z-index: 9;
-    height: 26%;
+    max-height: 15%;
   }
 
   .create-post-card {
