@@ -63,7 +63,7 @@
     width: 98%;
     overflow: hidden;
     z-index: 9;
-    height: 38%;
+    max-height: 130px;
   }
 
   main {
@@ -393,7 +393,7 @@ body {
       width: 98%;
       overflow: hidden;
       z-index: 9;
-      height: 26%;
+      max-height: 15%;
     }
   
     .create-post-card {
@@ -493,7 +493,7 @@ body {
     width: 98%;
     overflow: hidden;
     z-index: 9;
-    height: 26%;
+    max-height: 15%;
   }
 
   .create-post-card {
