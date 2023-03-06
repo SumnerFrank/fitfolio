@@ -21,7 +21,7 @@ router.get('/posts', (req, res) => {
                 ],
                 include: {
                     model: User,
-                    attrubutes: ['userName']
+                    attributes: ['userName']
                 }
             },
             {
@@ -147,5 +147,26 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     res.render('signup');
 })
+
+// when a user comes to this route
+router.get('/dashboard', (req, res) => {
+    // get the users id
+    const user_id = 1 // 
+    // call the db to get all the user workouts
+    Workout.findAll({
+        where: {
+            user_id: user_id 
+        }
+    }).then((workouts) => {
+        // console log workouts
+        console.log('workouts');
+        console.log(workouts);
+        // render the page w/ that data
+        res.render('dashboard');
+    }).catch((err) => {
+        console.error(err)
+    })
+
+});
 
 module.exports = router;
