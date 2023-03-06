@@ -47,25 +47,25 @@ router.get('/posts', (req, res) => {
 
 router.get('/exercise', (req, res) => {
     Workout.findAll({
-        // include: [
-        //     {
-        //         model: Comment,
-        //         attributes: [
-        //             'id',
-        //             'comment_body',
-        //             'post_id',
-        //             'user_id',
-        //         ],
-        //         include: {
-        //             model: User,
-        //             attrubutes: ['userName']
-        //         }
-        //     },
-        //     {
-        //         model: User,
-        //         attribute: ['userName']
-        //     }
-        // ]
+        include: [
+            {
+                model: Comment,
+                attributes: [
+                    'id',
+                    'comment_body',
+                    'post_id',
+                    'user_id',
+                ],
+                include: {
+                    model: User,
+                    attrubutes: ['userName']
+                }
+            },
+            {
+                model: User,
+                attribute: ['userName']
+            }
+        ]
         // TO DO: REVIEW THIS
     })
     .then(dbPostData => {
@@ -73,7 +73,7 @@ router.get('/exercise', (req, res) => {
         console.log(exercises);
         res.render('exercise', {
             exercises, 
-            loggedIn: req.session.loggedIn
+            // loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
@@ -82,33 +82,9 @@ router.get('/exercise', (req, res) => {
     });
 });
 
-// GET REQUEST FOR CREATED WORKOUT
-// router.get('/exercise', (req, res) => {
-//     // res.render('exercise'),
-//     console.log('exercise')
-// TO DO: GET ALL WORKOUTS WILL NEED MORE WORK
 
 router.get('/index', (req, res) => {
     Workout.findAll({
-        // include: [
-        //     {
-        //         model: Comment,
-        //         attributes: [
-        //             'id',
-        //             'comment_body',
-        //             'post_id',
-        //             'user_id',
-        //         ],
-        //         include: {
-        //             model: User,
-        //             attrubutes: ['userName']
-        //         }
-        //     },
-        //     {
-        //         model: User,
-        //         attribute: ['userName']
-        //     }
-        // ]
         // TO DO: REVIEW THIS
     })
     .then(dbPostData => {
@@ -124,6 +100,24 @@ router.get('/index', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+// router.get('/stats', (req, res) => {
+//     Workout.findAll({
+//         // TO DO: REVIEW THIS
+//     })
+//     .then(dbPostData => {
+//         const stat = dbPostData.map(post => post.get({ plain: true }));
+//         console.log(stat);
+//         res.render('stats', {
+//             indexStats, 
+//             loggedIn: req.session.loggedIn
+//         });
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//     });
+// });
 
 
 

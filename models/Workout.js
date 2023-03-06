@@ -48,7 +48,8 @@ Workout.init(
   //   type: DataTypes.DATE,
   //   allowNull: false,
   //   defaultValue: DataTypes.NOW
-  // } TO DO : TEST DATES AFTER SEEDING!!!
+  // } 
+  // TO DO : TEST DATES AFTER SEEDING!!!
 },
 {
   sequelize,

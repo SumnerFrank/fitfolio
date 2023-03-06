@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
 });
 
 //Create a workout
-router.post('/', withAuth, (req, res) => {
+router.put('/', withAuth, (req, res) => {
     if (req.session.loggedIn) {
     Workout.create({
         type: req.body.type,
