@@ -18,8 +18,8 @@ Workout.init(
       },
       name: {
         type: DataTypes.STRING,
-        default: 'Workout',
-        allowNull: false
+        // default: 'Workout',
+        // allowNull: false
       },
       duration: {
         type: DataTypes.INTEGER,
