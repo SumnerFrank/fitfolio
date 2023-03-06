@@ -88,7 +88,42 @@ router.get('/exercise', (req, res) => {
 //     console.log('exercise')
 // TO DO: GET ALL WORKOUTS WILL NEED MORE WORK
 
-
+router.get('/index', (req, res) => {
+    Workout.findAll({
+        // include: [
+        //     {
+        //         model: Comment,
+        //         attributes: [
+        //             'id',
+        //             'comment_body',
+        //             'post_id',
+        //             'user_id',
+        //         ],
+        //         include: {
+        //             model: User,
+        //             attrubutes: ['userName']
+        //         }
+        //     },
+        //     {
+        //         model: User,
+        //         attribute: ['userName']
+        //     }
+        // ]
+        // TO DO: REVIEW THIS
+    })
+    .then(dbPostData => {
+        const indexStats = dbPostData.map(post => post.get({ plain: true }));
+        console.log(indexStats);
+        res.render('index', {
+            indexStats, 
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 
 
