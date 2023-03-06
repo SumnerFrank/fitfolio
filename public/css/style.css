@@ -39,7 +39,7 @@
   header h1 {
     font-family: 'Bebas Neue', cursive;
     color: rgb(255, 255, 255);
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     text-shadow: 5px 5px 5px rgb(27, 27, 27);
   }
@@ -53,18 +53,17 @@
   }
 
   nav {
-    padding: 10px;
+    margin: 0;
     text-align: center;
-    background-color: rgba(64, 64, 64, 64);
-    border-radius: 15px 15px 15px 15px;
+    background-color:#2e2e2e;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
     color: #ffffff;
-    border-radius: 15px 15px 15px 15px;
     position: fixed;
-    top: 10;
-    width: 95%;
+    top: 0px;
+    width: 98%;
     overflow: hidden;
     z-index: 9;
+    height: 38%;
   }
 
   main {
@@ -227,7 +226,6 @@
     font-size: 20px;
   }
 
->>>>>>> main
 body {
   background-color: rgb(183, 153, 106);
 }
@@ -341,6 +339,20 @@ body {
         margin-right: auto;
       }
   }
+
+  nav {
+    margin: 0;
+    text-align: center;
+    background-color:#2e2e2e;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: #ffffff;
+    position: fixed;
+    top: 0px;
+    width: 98%;
+    overflow: hidden;
+    z-index: 9;
+    height: 37%;
+  }
   
   /* Style for smaller screen sizes */
   @media (max-width: 768px) {
@@ -354,6 +366,20 @@ body {
       margin-right: auto;
       font-family: 'Bebas Neue', cursive;
       font-size: 26px;
+    }
+
+    nav {
+      margin: 0;
+      text-align: center;
+      background-color:#2e2e2e;
+      box-shadow: 5px 5px 5px rgb(0, 0, 0);
+      color: #ffffff;
+      position: fixed;
+      top: 0px;
+      width: 98%;
+      overflow: hidden;
+      z-index: 9;
+      height: 26%;
     }
   
     .create-post-card {
@@ -427,7 +453,6 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-}
 
 /* Styles for smaller screen sizes */
 @media (max-width: 768px) {
@@ -441,6 +466,20 @@ body {
     margin-right: auto;
     font-family: 'Bebas Neue', cursive;
     font-size: 26px;
+  }
+
+  nav {
+    margin: 0;
+    text-align: center;
+    background-color:#2e2e2e;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: #ffffff;
+    position: fixed;
+    top: 0px;
+    width: 98%;
+    overflow: hidden;
+    z-index: 9;
+    height: 26%;
   }
 
   .create-post-card {
@@ -525,12 +564,15 @@ nav a {
   color: white;
   transition: .3s;
   align-items: center;
-  list-style: ;
   display: flex;
   justify-content: center;
 }
 
 nav a:hover {
  background-color: #cf3700;
-
 }
+
+.feed-style {
+  margin-top: 25px;
+}
+
