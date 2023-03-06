@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
             'reps',
             'sets',
             'distance'
-        ]
+        ]  
+        
+        // TO DO: WILL SHOW ALL VALUES IF COMMENTED OUT!!!
     })
     .then(dbWorkoutData => res.json(dbWorkoutData))
     .catch(err => {

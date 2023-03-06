@@ -13,9 +13,18 @@ Workout.init(
         autoIncrement: true
       },
       type: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
+    
+      },
+      name: {
+        type: DataTypes.STRING,
+        // default: 'Workout',
+        // allowNull: false
       },
       duration: {
+        type: DataTypes.INTEGER,
+      },
+      weight: {
         type: DataTypes.INTEGER,
         default: null,
       },
@@ -35,11 +44,11 @@ Workout.init(
     type: DataTypes.INTEGER,
     default: 0,
   },
-  created_at: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  }
+  // created_at: {
+  //   type: DataTypes.DATE,
+  //   allowNull: false,
+  //   defaultValue: DataTypes.NOW
+  // } TO DO : TEST DATES AFTER SEEDING!!!
 },
 {
   sequelize,
