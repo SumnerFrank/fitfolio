@@ -35,22 +35,23 @@
           <div class="populate-post-card">
               <h4><a href=""></a>{{post.post_title}}</h4>
               <h4><a href=""></a>{{post.post_body}}</h4>
-                <form class="form populate-post">
-                  <h3><div>Comments should go here</div></h3>
+                  {{#each post.comments as |comment|}}
               <h3><a href=""></a>{{comment.comment_body}}</h3>
+              {{/each}}
+              {{!-- <form id="comment-form" class="form populate-post"> --}}
+
                 <label for="comment">Share your thoughts!</label>
-                <textarea id="comment" name="comment" placeholder="Leave a comment.."></textarea>
-                <button type="submit">Submit Comment</button>
-                </form>
+                <textarea id="comment" name="comment" placeholder="Leave a comment.." data-id="{{post.id}}"></textarea>
+                <button id="comment-form" type="button">Submit Comment</button>
+                {{!-- </form> --}}
             </div>
             {{/each}}
-        </form>
     </div>
   </div>
 
 
   <h4><a href="/feed/{{posts.id}}"></a></h4>
 
-<script src="../public/js/profile.js"></script>
+<script src="/js/profile.js"></script>
 
 </div>
