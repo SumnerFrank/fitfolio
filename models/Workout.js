@@ -17,13 +17,11 @@ Workout.init(
       },
       duration: {
         type: DataTypes.INTEGER,
-        default: 0,
-        allowNull: false
+        default: null,
       },
       reps: {
         type: DataTypes.INTEGER,
-        default: 0,
-        allowNull: false
+        default: null,
       },
       sets: {
         type: DataTypes.INTEGER,
