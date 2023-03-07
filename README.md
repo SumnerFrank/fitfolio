@@ -5,6 +5,7 @@
 ## Table of Content
 - [Fitfolio](#Fitfolio)
   - [Table of Content](#table-of-content)
+  -[Deployment] (#Deployment)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -12,6 +13,9 @@
   - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
+  
+## Deployment  
+https://fitfolio.herokuapp.com/
 
 ## Description
 *Fitfolio is the best place to share your accomplishments in the gym, compete with your friends, and track your own progress! With this application, you can make posts, comment on others' posts, and keep an inventory of your workouts so you can remember what worked, what sucked, and what else you can do.* 
