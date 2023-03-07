@@ -543,17 +543,18 @@ nav {
   color: #fff;
   cursor: pointer;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   transition: background-color 0.3s ease;
   margin-top: 10px;
   font-family: 'Bebas Neue' cursive;
   list-style: none;
+  position: relative;
   
 }
 
 nav a {
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 5px;
   resize: none;
