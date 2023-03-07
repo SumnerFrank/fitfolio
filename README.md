@@ -5,7 +5,7 @@
 ## Table of Content
 - [Fitfolio](#Fitfolio)
   - [Table of Content](#table-of-content)
-  -[Deployment] (#Deployment)
+  - [Deployment] (#Deployment)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
