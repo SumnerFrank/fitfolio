@@ -24,15 +24,24 @@ https://fitfolio.herokuapp.com/
 
 ## Installation
 ***Please install the package locally to your working project directory.***
+- On your preferred code editor, use the command line to run `npm i`
+- The latest version of the required packages will be installed.
   
 
 ## Usage
 ***Please ensure you have followed above steps to install package first!***
-- Access 
+- Access your working directory project folder and create your **.env** file. Copy and paste the code below to connect to your schema from the MySQL shell
+
+`mysql -u root -p` 
+`source db/schema.sql` 
+- Once done enter quit or exit to terminate the sql session. Keyboard shortcut CTRL+C will bring you back to your Terminal/Shell/Bash and run the following code. 
+
+`npm run start`
+- Once you are connected to your local ran server, navigate to http://localhost:3001/ in your browser. You can interact with our app from the homepage.
 
 ***See the images and video below for demo.***
 
-ADD IMAGES/VID HERE
+![screencapture-fitfolio-herokuapp-2023-03-06-21_45_08](https://user-images.githubusercontent.com/117052258/223307075-287f1850-d96b-40b6-a8be-5d6188b6964c.png)
 
 
 ## Contributing
